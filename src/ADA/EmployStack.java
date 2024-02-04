@@ -8,6 +8,24 @@ class Node{
     private int id;
     private String position;
     private double salary;
+    private String phoneNo;
+    private String email;
+
+    public String getPhoneNo() {
+        return phoneNo;
+    }
+
+    public void setPhoneNo(String phoneNo) {
+        this.phoneNo = phoneNo;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public String getPosition() {
         return position;
@@ -52,13 +70,15 @@ class Node{
 
 public class EmployStack {
     Node head = null;
-    void push(String n, int i, String pos, double s){
+    void push(String n, int i, String pos, double s, String ph, String mail){
         if(head == null){
             Node emp = new Node();
             emp.setId(i);
             emp.setName(n);
             emp.setPosition(pos);
             emp.setSalary(s);
+            emp.setPhoneNo(ph);
+            emp.setEmail(mail);
             head = emp;
         }
         else {
@@ -68,6 +88,8 @@ public class EmployStack {
             emp.setN(head);
             emp.setPosition(pos);
             emp.setSalary(s);
+            emp.setPhoneNo(ph);
+            emp.setEmail(mail);
             head = emp;
         }
     }
@@ -75,6 +97,7 @@ public class EmployStack {
         if(head != null){
             System.out.println("Employee: "+head.getName()+" Id: "+head.getId());
             System.out.println("Employee Salary: "+head.getSalary()+" Position: "+head.getPosition());
+            System.out.println("Employee Email: "+ head.getEmail()+" Employee ph: "+head.getPhoneNo());
             head = head.getN();
         }
         else{
@@ -85,6 +108,7 @@ public class EmployStack {
         if(head != null){
             System.out.println("Employee: "+head.getName()+" Id: "+head.getId());
             System.out.println("Employee Salary: "+head.getSalary()+" Position: "+head.getPosition());
+            System.out.println("Employee Email: "+ head.getEmail()+" Employee ph: "+head.getPhoneNo());
         }
         else{
             System.out.println("Stack is empty");
@@ -95,17 +119,18 @@ public class EmployStack {
         while(itr != null){
             System.out.println("Employee: "+itr.getName()+" Id: "+itr.getId());
             System.out.println("Employee Salary: "+itr.getSalary()+" Position: "+itr.getPosition());
+            System.out.println("Employee Email: "+ itr.getEmail()+" Employee ph: "+itr.getPhoneNo());
             itr = itr.getN();
         }
     }
 
     void test(EmployStack e){
-        e.push("Nathkhat",25,"Assistant",50000.68);
-        e.push("Nathkhat23",25,"Assistant",50000.68);
-        e.push("Nathkhat45",25,"Assistant",50000.68);
-        e.push("Nathkhat465",25,"Assistant",50000.68);
-        e.push("Nathkhat7",25,"Assistant",50000.68);
-        e.push("Nathkhat8",25,"Assistant",50000.68);
+        e.push("Nathkhat",25,"Assistant",50000.68,"799997867","kartikey@gmail.com");
+        e.push("Nathkhat23",25,"Assistant",50000.68,"799997867","kartikey@gmail.com");
+        e.push("Nathkhat45",25,"Assistant",50000.68,"799997867","kartikey@gmail.com");
+        e.push("Nathkhat465",25,"Assistant",50000.68,"799997867","kartikey@gmail.com");
+        e.push("Nathkhat7",25,"Assistant",50000.68,"799997867","kartikey@gmail.com");
+        e.push("Nathkhat8",25,"Assistant",50000.68,"799997867","kartikey@gmail.com");
         e.display();
         e.pop();
         e.pop();
@@ -139,7 +164,11 @@ public class EmployStack {
                     int i = sc.nextInt();
                     System.out.println("Enter Employee Salary: ");
                     double s = sc.nextDouble();
-                    e.push(n,i,pos,s);
+                    System.out.println("Enter Employee Email: ");
+                    String mail = sc.next();
+                    System.out.println("Enter Employee phone no: ");
+                    String ph = sc.next();
+                    e.push(n,i,pos,s,ph,mail);
                     break;
 
                 case 2:
