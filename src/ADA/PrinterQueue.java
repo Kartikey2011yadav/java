@@ -1,20 +1,16 @@
 package ADA;
 
+import java.util.Hashtable;
+
 class printJobs{
-    private final String id;
     private final int size;
     private final boolean isColored;
     private final int priority;
 
-    public printJobs(String id, int size, boolean isColored, int priority) {
-        this.id = id;
+    public printJobs(int size, boolean isColored, int priority) {
         this.size = size;
         this.isColored = isColored;
         this.priority = priority;
-    }
-
-    public String getId() {
-        return id;
     }
 
     public int getSize() {
@@ -31,6 +27,12 @@ class printJobs{
 }
 
 public class PrinterQueue {
+    private Hashtable<String,printJobs> jobs= new Hashtable<>();
+
+    void addJob(String id, int pr, int size, boolean isColor){
+        jobs.put(id,new printJobs(size,isColor,pr));
+    }
+
     public static void main(String[] args) {
 
     }
