@@ -18,7 +18,7 @@ class Consumer implements Runnable {
                 if (buffer.isEmpty()) {
                     continue;
                 }
-                if (buffer.get(0).equals(Main.EOF)) {
+                if (buffer.get(0).equals(Main.EOF+"3")) {
                     System.out.println(Thread.currentThread().getName() + " exiting.");
                     break;
                 } else {

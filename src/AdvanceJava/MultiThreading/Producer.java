@@ -13,7 +13,7 @@ class Producer implements Runnable {
 
     @Override
     public void run() {
-        String[] numbers = {"1", "2", "3"};
+        String[] numbers = {"1", "2", "3","4"};
         for (String number : numbers) {
             synchronized (buffer) {
                 buffer.add(number);
@@ -28,7 +28,7 @@ class Producer implements Runnable {
         }
         System.out.println(Thread.currentThread().getName() + " added " + Main.EOF);
         synchronized (buffer) {
-            buffer.add(Main.EOF);
+            buffer.add(Main.EOF+"3");
         }
     }
 }
