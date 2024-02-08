@@ -3,10 +3,12 @@ package AdvanceJava.MultiThreading;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class ProducerConsumer {
     static Semaphore bufferLock = new Semaphore(1);
     static List<Integer> buffer = new ArrayList<>();
+    static int productCount;
 
     public static class producer implements Runnable{
 
@@ -14,6 +16,7 @@ public class ProducerConsumer {
 
         public producer(int products) {
             this.products = products;
+            productCount += products;
         }
 
         @Override
@@ -22,8 +25,11 @@ public class ProducerConsumer {
                 while (products>0){
                     bufferLock.acquire();
                     buffer.add((int) (Math.random()*100));
+                    int sleepTime = ThreadLocalRandom.current().nextInt(1000, 1500);
+                    Thread.sleep(sleepTime);
                     System.out.println(Thread.currentThread().getName()+" Produced product: "+buffer.getLast());
                     products-=1;
+
                     bufferLock.release();
                 }
 
@@ -37,10 +43,19 @@ public class ProducerConsumer {
         @Override
         public void run(){
             try{
-                while (!buffer.isEmpty()){
+                while (true){
+                    if (buffer.isEmpty()) {
+                        continue;
+                    }
                     bufferLock.acquire();
+                    int sleepTime = ThreadLocalRandom.current().nextInt(1000, 1500);
+                    Thread.sleep(sleepTime);
                     System.out.println(Thread.currentThread().getName()+" Consumes product: "+buffer.getFirst());
                     buffer.removeFirst();
+                    productCount--;
+                    if(productCount <=0){
+                        return;
+                    }
                     bufferLock.release();
                 }
 
@@ -51,19 +66,18 @@ public class ProducerConsumer {
     }
 
     public static void main(String[] args) {
-        producer product = new producer(10);
+        producer product = new producer(5);
+        producer product_ = new producer(8);
         Thread producer1 = new Thread(product);
         producer1.setName("Producer1");
-        Thread producer2 = new Thread(product);
+        Thread producer2 = new Thread(product_);
         producer2.setName("Producer2");
         consumer consumption = new consumer();
-        Thread consumer1 = new Thread(consumption);
-        consumer1.setName("Consumer1");
-        Thread consumer2 = new Thread(consumption);
-        consumer2.setName("Consumer2");
+        Thread consumer = new Thread(consumption);
+        consumer.setName("Consumer");
         producer1.start();
-        consumer1.start();
+        consumer.start();
         producer2.start();
-        consumer2.start();
+
     }
 }
