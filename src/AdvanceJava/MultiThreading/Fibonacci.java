@@ -11,7 +11,6 @@ class Fibonacci extends Thread
         {
             int a=0, b=1, c=0;
             BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
-
             System.out.print("Enter the Limit for fabonacci: ");
 
             int n = Integer.parseInt(br.readLine());
