@@ -26,11 +26,11 @@ public class ProducerConsumer {
                     bufferLock.acquire();
                     buffer.add((int) (Math.random()*100));
                     int sleepTime = ThreadLocalRandom.current().nextInt(1000, 1500);
-                    Thread.sleep(sleepTime);
                     System.out.println(Thread.currentThread().getName()+" Produced product: "+buffer.getLast());
                     products-=1;
 
                     bufferLock.release();
+                    Thread.sleep(sleepTime);
                 }
 
             } catch (InterruptedException e) {
@@ -49,7 +49,6 @@ public class ProducerConsumer {
                     }
                     bufferLock.acquire();
                     int sleepTime = ThreadLocalRandom.current().nextInt(1000, 1500);
-                    Thread.sleep(sleepTime);
                     System.out.println(Thread.currentThread().getName()+" Consumes product: "+buffer.getFirst());
                     buffer.removeFirst();
                     productCount--;
@@ -57,6 +56,7 @@ public class ProducerConsumer {
                         return;
                     }
                     bufferLock.release();
+                    Thread.sleep(sleepTime);
                 }
 
             } catch (InterruptedException e) {
