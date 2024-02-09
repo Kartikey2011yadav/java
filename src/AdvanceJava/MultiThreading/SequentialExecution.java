@@ -26,6 +26,7 @@ public class SequentialExecution {
         @Override
         public void run() {
             try{
+                BLock.acquire();
                 for (int i = 0; i < 4; i++) {
                     System.out.println("Thread B: "+i);
                 }
@@ -42,6 +43,7 @@ public class SequentialExecution {
         @Override
         public void run() {
             try{
+                CLock.acquire();
                 for (int i = 0; i < 3; i++) {
                     System.out.println("Thread C: "+i);
                 }
