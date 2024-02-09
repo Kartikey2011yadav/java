@@ -56,7 +56,7 @@ public class Producer_consumer {
             while (true) {
                 synchronized (this) {
 
-                    if(productCount == 0){
+                    if (productCount == 0) {
                         System.out.println("All products are accounted for....");
                         return;
                     }

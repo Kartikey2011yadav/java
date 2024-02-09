@@ -85,8 +85,7 @@ public class DiningPhilosopher {
         for (int i = 0; i < no_of_philosophers; i++){
             chopsticks[i] = new chopstick();
         }
-        ExecutorService executor =
-                Executors.newFixedThreadPool(no_of_philosophers);
+        ExecutorService executor = Executors.newFixedThreadPool(no_of_philosophers);
         for (int i = 0; i < no_of_philosophers; i++){
             if( i % 2 == 0)
                 philosophers[i] = new philosopher(i, chopsticks[(i
@@ -97,6 +96,7 @@ public class DiningPhilosopher {
                         no_of_philosophers] );
 
             executor.execute(philosophers[i]);
+//            philosophers[i].start();
         }
     }
 

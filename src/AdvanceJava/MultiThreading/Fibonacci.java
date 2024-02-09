@@ -36,7 +36,6 @@ class Fibonacci extends Thread
         {
             Fibonacci fib = new Fibonacci();
             fib.start();
-            fib.sleep(4000);
 
         }
         catch (Exception ex)

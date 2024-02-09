@@ -28,7 +28,7 @@ class Count implements Runnable
 }
 class RunnableExample
 {
-    public static void main(String args[])
+    public static void main(String[] args)
     {
         Count cnt = new Count();
         try
