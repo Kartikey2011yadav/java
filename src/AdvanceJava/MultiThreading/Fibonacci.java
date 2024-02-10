@@ -1,7 +1,6 @@
 package AdvanceJava.MultiThreading;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
+import java.util.Scanner;
 
 class Fibonacci extends Thread
 {
@@ -10,10 +9,10 @@ class Fibonacci extends Thread
         try
         {
             int a=0, b=1, c=0;
-            BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
+            Scanner sc = new Scanner(System.in);
             System.out.print("Enter the Limit for fabonacci: ");
 
-            int n = Integer.parseInt(br.readLine());
+            int n = sc.nextInt();
             System.out.println("\n=================================");
             System.out.println("Fibonacci series:");
             while (n>0)
@@ -27,7 +26,7 @@ class Fibonacci extends Thread
         }
         catch (Exception ex)
         {
-            ex.printStackTrace();
+            ex.printStackTrace(System.out);
         }
     }
     public static void main(String[] args)
@@ -40,7 +39,7 @@ class Fibonacci extends Thread
         }
         catch (Exception ex)
         {
-            ex.printStackTrace();
+            ex.printStackTrace(System.out);
         }
     }
 }
