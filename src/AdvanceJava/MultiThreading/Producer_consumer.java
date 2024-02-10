@@ -16,7 +16,7 @@ public class Producer_consumer {
                 try {
                     pc.produce();
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    e.printStackTrace(System.out);
                 }
             }
         });
@@ -27,7 +27,7 @@ public class Producer_consumer {
                 try {
                     pc.consume();
                 } catch (InterruptedException e) {
-                    e.printStackTrace();
+                    e.printStackTrace(System.out);
                 }
             }
         });
