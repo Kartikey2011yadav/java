@@ -38,7 +38,9 @@ public class ThreadEx {
         t1.start();
         t2.start();
         t3.start();
-        Thread.sleep(1000);
+        t1.join();
+        t2.join();
+        t3.join();
         System.out.println("... Multithreading is over ");
     }
 }

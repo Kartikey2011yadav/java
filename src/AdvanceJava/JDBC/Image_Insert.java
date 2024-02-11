@@ -1,5 +1,6 @@
 package AdvanceJava.JDBC;
 
+import javax.swing.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -22,10 +23,10 @@ public class Image_Insert
             String query="insert into img_table values(?,?);";
             PreparedStatement stat= conn.prepareStatement(query);
 
-//            JFileChooser jfile=new JFileChooser();
-//            jfile.showOpenDialog(null);
-//            File file=jfile.getSelectedFile();
-            File file = new File("/home/darth-kartikey/Downloads/me.jpeg");
+            JFileChooser jfile=new JFileChooser();
+            jfile.showOpenDialog(null);
+            File file=jfile.getSelectedFile();
+//            File file = new File("/home/darth-kartikey/Downloads/me.jpeg");
             FileInputStream filestream=new FileInputStream(file);
 
             stat.setInt(1,1);
