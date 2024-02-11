@@ -12,7 +12,7 @@ public class Deleting_Records
     {
         try
         {
-            Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/Adv_Java","root","2003");
+            Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/AdvJava","root","Kartikey2011");
             Statement stat=conn.createStatement();
             Scanner s=new Scanner(System.in);
             System.out.print("Enter ID to be Deleted:");

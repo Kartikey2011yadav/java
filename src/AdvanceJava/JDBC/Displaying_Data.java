@@ -9,12 +9,12 @@ public class Displaying_Data
         Connection conn=null;
         try
         {
-            conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/Adv_Java","root","2003");
+            conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/AdvJava","root","Kartikey2011");
             Statement statement= conn.createStatement();
             ResultSet res= statement.executeQuery("Select * from Student;");
             while(res.next())
             {
-                System.out.println("ID:"+res.getString("ID")+"   Name:"+res.getString("NAME")+"   Age:"+res.getInt("AGE"));
+                System.out.println("ID:"+res.getString("ID")+"   Name:"+res.getString("NAME")+"   Interest:"+res.getString("INTEREST"));
             }
         }
         catch (SQLException e)

@@ -12,18 +12,18 @@ public class Inserting_Records
 
         try
         {
-            String id,name;
+            String id,name,interest;
             Scanner s=new Scanner(System.in);
-            int age;
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Adv_Java", "root", "2003");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/AdvJava", "root", "Kartikey2011");
             Statement stat = conn.createStatement();
-            System.out.print("Enter ID:");
+            System.out.print("Enter ID: ");
             id=s.nextLine();
-            System.out.print("Enter Name:");
+            System.out.print("Enter Name: ");
             name=s.nextLine();
-            System.out.print("Enter Age:");
-            age=s.nextInt();
-            stat.executeUpdate("INSERT INTO Student(ID,NAME,AGE) VALUES('"+id+"','"+name+"',"+age+");");
+            System.out.print("Enter Interests: ");
+            interest=s.nextLine();
+//            stat.executeUpdate("INSERT INTO Course(ID,Title) VALUES('"+id+"','"+name+"');");
+            stat.executeUpdate("INSERT INTO Student(ID,NAME,INTEREST) VALUES('"+id+"','"+name+"','"+interest+"');");
             System.out.println("Record Inserted");
         }
         catch(Exception e)
