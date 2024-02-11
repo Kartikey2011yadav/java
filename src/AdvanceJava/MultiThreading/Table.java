@@ -17,7 +17,7 @@ public class Table implements Runnable {
             threads[i] = new Table(i + 1);
             Thread t = new Thread(threads[i]);
             t.start();
-        Thread.sleep(500);
+            Thread.sleep(500);
         }
         System.out.println("Table of 12: ");
         table.forEach((k, v) -> {
