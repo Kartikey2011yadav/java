@@ -14,7 +14,7 @@ public class Update_Records
         {
             conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/AdvJava","root","Kartikey2011");
             Statement stat=conn.createStatement();
-            stat.executeUpdate("UPDATE Student set NAME='Soham' where ID='IT-2k21-58';");
+            stat.executeUpdate("UPDATE Student set NAME='Soham Kothari' where ID='IT-2k21-58';");
             System.out.println("Record Updated");
         }
         catch (SQLException e)
