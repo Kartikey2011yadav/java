@@ -17,7 +17,7 @@ public class Right_Join
             ResultSet res=stat.executeQuery(query);
             while (res.next())
             {
-                System.out.println("Id:"+res.getString("ID")+"  Name:"+res.getString("NAME")+"  Age:"+res.getString("INTEREST")+"  Course:"+res.getString("Title"));
+                System.out.println("Id:"+res.getString("ID")+"  Name:"+res.getString("NAME")+"  Interest:"+res.getString("INTEREST")+"  Course:"+res.getString("Title"));
             }
         }
         catch (Exception e)
