@@ -10,10 +10,10 @@ public class Alter_Table
     {
         try
         {
-            Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/Adv_Java","root","2003");
+            Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/AdvJava","root","Kartikey2011");
             Statement stat= conn.createStatement();
             stat.executeUpdate("alter table Student drop column Marks");
-            System.out.println("Added collum Succesfully");
+            System.out.println("From table Student, column `Marks` Dropped Successfully");
         }
         catch (Exception e)
         {

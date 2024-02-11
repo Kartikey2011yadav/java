@@ -10,21 +10,21 @@ public class Prepared_Statements
         Connection conn=null;
         String id,name;
         Scanner s=new Scanner(System.in);
-        int age;
+        String inter;
         try
         {
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/Adv_Java","root","2003");
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/AdvJava","root","Kartikey2011");
             String query="insert into Student values(?,?,?);";
             PreparedStatement stat= conn.prepareStatement(query);
             System.out.print("Enter ID:");
             id=s.nextLine();
             System.out.print("Enter Name:");
             name=s.nextLine();
-            System.out.print("Enter Age:");
-            age=s.nextInt();
+            System.out.print("Enter Interest:");
+            inter=s.nextLine();
             stat.setString(1,id);
             stat.setString(2,name);
-            stat.setInt(3,age);
+            stat.setString(3,inter);
             stat.executeUpdate();
             System.out.println("Data Inserted Successfully");
         }

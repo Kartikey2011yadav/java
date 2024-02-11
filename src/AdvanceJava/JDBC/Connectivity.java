@@ -10,7 +10,7 @@ public class Connectivity
         Connection conn=null;
         try
         {
-            conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/Adv_Java","root","2003");
+            conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/AdvJava","root","Kartikey2011");
             if(conn!=null)
             {
                 System.out.println("Mysql Connected Successfully");

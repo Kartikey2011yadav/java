@@ -11,13 +11,13 @@ public class Right_Join
     {
         try
         {
-            Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/Adv_Java","root","2003");
+            Connection conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/AdvJava","root","Kartikey2011");
             Statement stat=conn.createStatement();
-            String query="select * from Student as s left join Course as c on s.ID=c.ID;";
+            String query="select * from Student as s right join Course as c on s.ID=c.ID;";
             ResultSet res=stat.executeQuery(query);
             while (res.next())
             {
-                System.out.println("Id:"+res.getString("ID")+"  Name:"+res.getString("NAME")+"  Age:"+res.getInt("AGE")+"  Course:"+res.getString("COURSE"));
+                System.out.println("Id:"+res.getString("ID")+"  Name:"+res.getString("NAME")+"  Age:"+res.getString("INTEREST")+"  Course:"+res.getString("Title"));
             }
         }
         catch (Exception e)
