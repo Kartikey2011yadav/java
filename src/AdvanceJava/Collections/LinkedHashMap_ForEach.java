@@ -17,5 +17,6 @@ public class LinkedHashMap_ForEach {
         for (Map.Entry<Integer,String> rec: students.entrySet()){
             System.out.println("Student: "+rec.getValue()+" Roll No. "+rec.getKey());
         }
+//        System.out.println(students.containsKey(25));
     }
 }
