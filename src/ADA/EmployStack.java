@@ -125,12 +125,12 @@ public class EmployStack {
     }
 
     void test(EmployStack e){
-        e.push("Nathkhat",25,"Assistant",50000.68,"799997867","kartikey@gmail.com");
-        e.push("Nathkhat23",25,"Assistant",50000.68,"799997867","kartikey@gmail.com");
-        e.push("Nathkhat45",25,"Assistant",50000.68,"799997867","kartikey@gmail.com");
-        e.push("Nathkhat465",25,"Assistant",50000.68,"799997867","kartikey@gmail.com");
-        e.push("Nathkhat7",25,"Assistant",50000.68,"799997867","kartikey@gmail.com");
-        e.push("Nathkhat8",25,"Assistant",50000.68,"799997867","kartikey@gmail.com");
+        e.push("Jakie",25,"Assistant",50000.68,"799997867","kartikey@gmail.com");
+        e.push("sam",25,"Manager",50000.68,"799997867","kartikey@gmail.com");
+        e.push("Dean",25,"Dev",50000.68,"799997867","kartikey@gmail.com");
+        e.push("Castial",25,"HR",50000.68,"799997867","kartikey@gmail.com");
+        e.push("John",25,"gard",50000.68,"799997867","kartikey@gmail.com");
+        e.push("Mark",25,"Assistant",50000.68,"799997867","kartikey@gmail.com");
         e.display();
         e.pop();
         e.pop();
@@ -156,18 +156,23 @@ public class EmployStack {
             System.out.print("Enter a option: ");
             switch (sc.nextInt()){
                 case 1:
+                    sc.nextLine();
                     System.out.println("Enter Employee Name: ");
-                    String n = sc.next();
+                    String n = sc.nextLine();
+
                     System.out.println("Enter Employee position: ");
-                    String pos = sc.next();
+                    String pos = sc.nextLine();
+
                     System.out.println("Enter Employee ID: ");
                     int i = sc.nextInt();
                     System.out.println("Enter Employee Salary: ");
                     double s = sc.nextDouble();
                     System.out.println("Enter Employee Email: ");
-                    String mail = sc.next();
+                    sc.nextLine();
+                    String mail = sc.nextLine();
+
                     System.out.println("Enter Employee phone no: ");
-                    String ph = sc.next();
+                    String ph = sc.nextLine();
                     e.push(n,i,pos,s,ph,mail);
                     break;
 
