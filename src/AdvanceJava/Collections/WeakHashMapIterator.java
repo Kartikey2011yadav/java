@@ -13,5 +13,6 @@ public class WeakHashMapIterator
         {
             System.out.println(itr.next());
         }
+        System.out.println(m);
     }
 }
