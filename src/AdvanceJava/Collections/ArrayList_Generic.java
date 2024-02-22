@@ -6,5 +6,6 @@ public class ArrayList_Generic {
         List<String> names = new ArrayList<>(Arrays.asList("John","ken","Jakie","Tom"));
         System.out.println("Names: "+names);
         System.out.println("No of elements: "+names.size());
+        System.out.println(names.indexOf("ken"));
     }
 }

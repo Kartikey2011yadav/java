@@ -22,5 +22,18 @@ public class ClassRecords {
             id rec = itr.next();
             System.out.println("Name: "+rec.getName()+" Roll No: "+rec.getRollNo());
         }
+        List<id> ls = new ArrayList<>();
+        ls.add(new id("tamnishq",63));
+        ls.add(new id("Nathkhat",58));
+        ls.add(new id("guttka",32));
+        ls.add(new id("jakie",31));
+        ls.add(new id("Npc",25));
+        ls.add(new id("R2D2",69));
+        ls.add(new id("Joe",49));
+        ls.add(new id("swifty",6));
+        System.out.println(stud.equals(ls));
+        System.out.println(ls);
+
+
     }
 }
