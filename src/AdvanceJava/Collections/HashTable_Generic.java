@@ -5,12 +5,14 @@ import java.util.Map;
 
 public class HashTable_Generic {
     public static void main(String[] args) {
-        Map<Integer,String> Num = new Hashtable<>();
+        Map<Integer, Object> Num = new Hashtable<>();
         Num.put(1,"One");
         Num.put(2,"Two");
         Num.put(3,"Three");
         Num.put(4,"Four");
         Num.put(5,"Five");
+
+        Num.put(6,Num);
 
         Num.forEach((k,v)->{
             System.out.println(k+" => "+v);

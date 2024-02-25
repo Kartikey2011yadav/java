@@ -12,6 +12,7 @@ public class HashMap_NonGeneric {
         records.put("Sys Programming",74.96);
         records.put("UNIX",91.04);
         records.put("ADA",82.35);
+
         System.out.println(records);
     }
 }
