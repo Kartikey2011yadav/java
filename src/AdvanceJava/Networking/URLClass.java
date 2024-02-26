@@ -28,7 +28,7 @@ public class URLClass {
 
             int temp = i.read();
             while (temp != -1){
-                System.out.print((char) temp);
+//                System.out.print((char) temp);
                 temp = i.read();
             }
 
