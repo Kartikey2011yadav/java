@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class Union_Join {
+public class Union {
     public static void main(String[] args)
     {
         try
