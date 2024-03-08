@@ -5,10 +5,10 @@ import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
 
-public class URLConntect {
+public class URLConnect {
     public static void main(String[] args) throws IOException {
 
-        URL url = new URL("https://mangapill.com/chapters/5343-10139000/mokushiroku-no-yonkishi-chapter-139");
+        URL url = new URL("https://mangapill.com/chapters/2085-10243000/jujutsu-kaisen-chapter-243");
         URLConnection u = url.openConnection();
         System.out.println(u.getInputStream());
         System.out.println(u.getHeaderField(3));

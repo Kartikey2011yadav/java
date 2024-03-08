@@ -24,9 +24,7 @@
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="de206344-6206-46cc-b2d9-3620613e90de" object-ref="schemas/AdvJava/tables/Course" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="de206344-6206-46cc-b2d9-3620613e90de" />

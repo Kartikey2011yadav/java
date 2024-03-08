@@ -41,7 +41,7 @@ public class All_in_One_
             ResultSet res= s.executeQuery("Select * from Student;");
             while(res.next())
             {
-                System.out.println("ID:"+res.getString("ID")+"   Name:"+res.getString("NAME")+"   Age:"+res.getInt("AGE"));
+                System.out.println("ID:"+res.getString("ID")+"   Name:"+res.getString("NAME")+"   Interest:"+res.getInt("AGE"));
             }
         }
         catch (SQLException e)
@@ -75,7 +75,7 @@ public class All_in_One_
 
                     System.out.print("Enter Name:");
                     String name=s.nextLine();
-                    System.out.print("Enter Age:");
+                    System.out.print("Enter Interest:");
                     int age=s.nextInt();
                     insert(stat,id1,name,age);
                 }
