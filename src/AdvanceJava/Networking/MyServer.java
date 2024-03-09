@@ -4,6 +4,8 @@ import java.io.DataInputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+// client to server
+
 public class MyServer {
     public static void main(String[] args) {
         try{
