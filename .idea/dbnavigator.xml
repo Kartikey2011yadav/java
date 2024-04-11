@@ -31,6 +31,8 @@
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="de206344-6206-46cc-b2d9-3620613e90de" dataset="AdvJava.Course" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="de206344-6206-46cc-b2d9-3620613e90de" dataset="AdvJava.img_table" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="de206344-6206-46cc-b2d9-3620613e90de" dataset="ShoppingCart.user" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="de206344-6206-46cc-b2d9-3620613e90de" dataset="AdvJava.Student" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
@@ -45,7 +47,7 @@
           <description value="" />
           <database-type value="MYSQL" />
           <config-type value="BASIC" />
-          <database-version value="8.0" />
+          <database-version value="8.3" />
           <driver-source value="BUNDLED" />
           <driver-library value="" />
           <driver value="" />
