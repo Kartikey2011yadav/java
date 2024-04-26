@@ -30,6 +30,7 @@ public class Arrayex {
         ls.add("NPC");
         ls.add("tanishq Swifty");
         ls.add("1");
+        ls.add(null);
         System.out.println(names.equals(ls));
         System.out.println(ls.hashCode());
         ls.remove("zack");
